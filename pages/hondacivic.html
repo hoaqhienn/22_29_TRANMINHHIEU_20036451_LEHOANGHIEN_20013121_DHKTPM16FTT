@@ -6,940 +6,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {box-sizing: border-box;}
-        body {font-family: Verdana, sans-serif;}
-        .mySlides {display: none;}
-        img {vertical-align: middle;}
-        
-        /* Slideshow container */
-        .slideshow-container {
-          max-width: 1000px;
-          position: relative;
-          margin: auto;
+        /*  */
+        body {
+            font-family: Arial;
+            margin: auto;
+            width: 890px;
+            height: auto;
         }
-        
-        /* Caption text */
-        .text {
-          color: #f2f2f2;
-          font-size: 15px;
-          padding: 8px 12px;
-          position: absolute;
-          bottom: 8px;
-          width: 100%;
-          text-align: center;
-        }
-        
-        /* Number text (1/3 etc) */
-        .numbertext {
-          color: #f2f2f2;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
-        
-        /* The dots/bullets/indicators */
-        .dot {
-          height: 15px;
-          width: 15px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-        
-        .active {
-          background-color: #717171;
-        }
-        
-        /* Fading animation */
-        .fade {
-          animation-name: fade;
-          animation-duration: 1.5s;
-        }
-        
-        @keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-        }
-        
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-          .text {font-size: 11px}
+
+        * {
+        box-sizing: border-box;
         }
 
         img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        vertical-align: middle;
         }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+        position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+        display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+        cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+        }
+
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+        float: left;
+        width: 20%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+        opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+        opacity: 1;
+        }
+
         </style>
 
 </head>
 
 <body>
-    <div class="slideshow-container" style="height: 500px;">
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 7</div>
-            <img src="../img/civic_gallery_0.jpg">
-            <div class="text">Caption Text</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 7</div>
-            <img src="../img/civic_gallery_1.jpg">
-            <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 7</div>
-            <img src="../img/civic_gallery_3.jpg">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 7</div>
-            <img src="../img/civic_gallery_4.jpg">
-            <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 7</div>
-            <img src="../img/civic_gallery_5.jpg">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">6 / 7</div>
-            <img src="../img/civic_gallery_6.jpg">
-            <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">7 / 7</div>
-            <img src="../img/civic_gallery_7.jpg">
-            <div class="text">Caption Three</div>
-        </div>
+    <div class="site-map" style="padding: 10px 0; border-bottom: 1px solid;">
+        <a class="parent mr-2" href="/" style="text-decoration: none; color: #cc0000;">Trang chủ</a>
+        <span class="img mr-2">❯</span>
+        <a class="current" href="/pages/buy.html" style="text-decoration: none; color: #cc0000;">Sản phẩm</a>
+        <span class="img mr-2">❯</span>
+        Honda Civic
     </div>
-    <br>
-
-    <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span>
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-    </div>
-
-    Honda Civic <br>
-    <a href="../index.html">Home</a>
-    <a href="../pages/buy.html">Back</a>
-
 
     <div>
-        <div class="container2">
-            <h2 class="section-spec-title">THÔNG SỐ KỸ THUẬT</h2>
-            <div class="s-specifications__content">
-                <div class="s-specifications__table s-specifications__table--header text-center">
-                    <table>
-                        <tbody>
-                        <tr class="" id="s-spec-head-table-1">
-                            <td id="s-specifications-table-head1"> Danh mục</td>
-                            <td id="s-specifications-table-head2">CIVIC E</td>
-                            <td id="s-specifications-table-head3">CIVIC G</td>
-                            <td id="s-specifications-table-head4">CIVIC RS</td>
-                        </tr>
-                        <tr class="bg-grey" id="s-spec-head-table-2" style="display: none;">
-                            <td id="s-specifications-table-head1_v2"> Danh mục</td>
-                            <td id="s-specifications-table-head2_v2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8">
-                                    <path id="Polygon_3" data-name="Polygon 3" d="M7,0l7,8H0Z" transform="translate(14 8) rotate(180)" fill="#fff"></path>
-                                </svg>
-                                <div class="dropdown">
-                                    <a class="s-spec-chose-type-car">CIVIC E</a>
-                                    <div style="position: relative;">
-                                        <ul class="s-spec-type-car">
-                                            <li onclick="reloadSpecTable(1)">CIVIC E</li>
-                                            <li onclick="reloadSpecTable(2)">CIVIC G</li>
-                                            <li onclick="reloadSpecTable(3)">CIVIC RS</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="s-specifications__content js-custom-scroll mCustomScrollbar _mCS_1" data-module="custom-scroll"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 1622px;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: -266px; left: 0px;" dir="ltr">
-                <div class="s-specifications__table text-center">
-                    <table>
-                        <tbody><tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Động cơ / Hộp số</strong>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Kiểu động cơ</td>
-                            <td class="s-spec-detail-item0" colspan="3">
-                                1.5L DOHC VTEC TURBO, 4 xi-lanh thẳng hàng, 16 van
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Hộp số</td>
-                            <td class="s-spec-detail-item0" colspan="3">
-                                Vô cấp CVT
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Dung tích xi lanh (cm³)</td>
-                            <td class="s-spec-detail-item0" colspan="3">
-                                1.498
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Công xuất cực đại (Hp/rpm)</td>
-                            <td class="s-spec-detail-item0" colspan="3">
-                                176 (131 kW)/6.000
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mô-men xoắn cực đại (Nm/rpm)</td>
-                            <td class="s-spec-detail-item0" colspan="3">
-                                240/1.700-4.500
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Dung tích thùng nhiên liệu (lít)</td>
-                            <td class="s-spec-detail-item0" colspan="3">
-                                47
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống nhiên liệu</td>
-                            <td class="s-spec-detail-item0" colspan="3">
-                                PGM-FI (Phun xăng trực tiếp)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="" colspan="4">
-                                <p class="text-uppercase">Mức tiêu thụ nhiên liệu</p>
-                                Được thử nghiệm bởi Trung tâm Thử nghiệm khí thải phương tiện cơ giới đường bộ
-                                (NETC), Cục Đăng kiểm Việt Nam theo tiêu chuẩn Phụ lục Q TCVN 6785 : 2015.
-                                Được kiểm tra và cấp giấy chứng nhận bởi Phòng Chứng nhận Chất lượng xe cơ giới
-                                (VAQ), Cục Đăng kiểm Việt Nam.<br>
-                                Mức độ tiêu thụ nhiên liệu thực tế có thể thay đổi do điều kiện sử dụng, kỹ năng lái
-                                xe và tình trạng bảo dưỡng kỹ thuật của xe.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mức tiêu thụ nhiên liệu chu trình tổ hợp (lít/100km)</td>
-                            <td class="s-spec-detail-item1">6,35</td>
-                            <td class="s-spec-detail-item2">5,98</td>
-                            <td class="s-spec-detail-item3">6,52</td>
-                        </tr>
-                        <tr>
-                            <td>Mức tiêu thụ nhiên liệu chu trình đô thị cơ bản (lít/100km)</td>
-                            <td class="s-spec-detail-item1">8,83</td>
-                            <td class="s-spec-detail-item2">8,03</td>
-                            <td class="s-spec-detail-item3">8,72</td>
-                        </tr>
-                        <tr>
-                            <td>Mức tiêu thụ nhiên liệu chu trình đô thị phụ (lít/100km)</td>
-                            <td class="s-spec-detail-item1">4,9</td>
-                            <td class="s-spec-detail-item2">4,8</td>
-                            <td class="s-spec-detail-item3">5,26</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Kích
-                                thước/ Trọng
-                                lượng</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Số chỗ ngồi</td>
-                            <td class="s-spec-detail-item0" colspan="3">5</td>
-                        </tr>
-                        <tr>
-                            <td>Dài x Rộng x Cao (mm)</td>
-                            <td class="s-spec-detail-item0" colspan="3">4.678 x 1.802 x 1.415</td>
-                        </tr>
-                        <tr>
-                            <td>Chiều dài cơ sở (mm)</td>
-                            <td class="s-spec-detail-item0" colspan="3">2.735</td>
-                        </tr>
-                        <tr>
-                            <td>Chiều rộng cơ sở (trước/ sau) (mm)</td>
-                            <td class="s-spec-detail-item1">1.547/1.575</td>
-                            <td class="s-spec-detail-item2">1.547/1.575</td>
-                            <td class="s-spec-detail-item3">1.537/1.565</td>
-                        </tr>
-                        <tr>
-                            <td>Cỡ lốp</td>
-                            <td class="s-spec-detail-item1">215/55R16</td>
-                            <td class="s-spec-detail-item2">215/50R17</td>
-                            <td class="s-spec-detail-item3">235/40ZR18</td>
-                        </tr>
-                        <tr>
-                            <td>La-zăng</td>
-                            <td class="s-spec-detail-item1">Hợp kim/16 inch</td>
-                            <td class="s-spec-detail-item2">Hợp kim/17 inch</td>
-                            <td class="s-spec-detail-item3">Hợp kim/18 inch</td>
-                        </tr>
-                        <tr>
-                            <td>Khoảng sáng gầm xe (mm)</td>
-                            <td class="s-spec-detail-item0" colspan="3">134</td>
-                        </tr>
-                        <tr>
-                            <td>Bán kính vòng quay tối thiểu (toàn thân) (m)</td>
-                            <td class="s-spec-detail-item1">5,8</td>
-                            <td class="s-spec-detail-item2">5,8</td>
-                            <td class="s-spec-detail-item3">6,1</td>
-                        </tr>
-                        <tr>
-                            <td>Khối lượng bản thân (kg)</td>
-                            <td class="s-spec-detail-item1">1.306</td>
-                            <td class="s-spec-detail-item2">1.319</td>
-                            <td class="s-spec-detail-item3">1.338</td>
-                        </tr>
-                        <tr>
-                            <td>Khối lượng toàn tải (kg)</td>
-                            <td class="s-spec-detail-item1">1.760</td>
-                            <td class="s-spec-detail-item2">1.760</td>
-                            <td class="s-spec-detail-item3">1.760</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Hệ thống
-                                treo</strong>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống treo trước</td>
-                            <td class="s-spec-detail-item0" colspan="3">Kiểu MacPherson</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống treo sau</td>
-                            <td class="s-spec-detail-item0" colspan="3">Đa liên kết</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Hệ thống
-                                phanh</strong>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Phanh trước</td>
-                            <td class="s-spec-detail-item0" colspan="3">Đĩa tản nhiệt</td>
-                        </tr>
-                        <tr>
-                            <td>Phanh sau</td>
-                            <td class="s-spec-detail-item0" colspan="3">Phanh đĩa</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Hệ thống
-                                hỗ trợ vận
-                                hành</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Trợ lực lái điện thích ứng nhanh với chuyển động (MA-EPS)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Van bướm ga điều chỉnh bằng điện tử (DBW)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Chế độ lái xe tiết kiệm nhiên liệu (ECON Mode)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Chức năng hướng dẫn lái tiết kiệm nhiên liệu (ECO Coaching)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Chế độ lái thể thao với lẫy chuyển số tích hợp trên vô lăng (SPORT Mode)</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Khởi động bằng nút bấm</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Ngoại
-                                thất</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Cụm đèn trước</td>
-                            <td class="s-spec-detail-item0" colspan="3"></td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Đèn chiếu xa</td>
-                            <td class="s-spec-detail-item1">Halogen</td>
-                            <td class="s-spec-detail-item2">LED</td>
-                            <td class="s-spec-detail-item3">LED</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Đèn chiếu gần</td>
-                            <td class="s-spec-detail-item1">Halogen</td>
-                            <td class="s-spec-detail-item2">LED</td>
-                            <td class="s-spec-detail-item3">LED</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Đèn chạy ban ngày</td>
-                            <td class="s-spec-detail-item1">LED</td>
-                            <td class="s-spec-detail-item2">LED</td>
-                            <td class="s-spec-detail-item3">LED</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Tự động bật tắt theo cảm biến ánh sáng</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Tự động tắt theo thời gian</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Tự động điều chỉnh góc chiếu sáng</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Đèn sương mù</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">LED</td>
-                            <td class="s-spec-detail-item3">LED</td>
-                        </tr>
-                        <tr>
-                            <td>Đèn hậu</td>
-                            <td class="s-spec-detail-item1">LED</td>
-                            <td class="s-spec-detail-item2">LED</td>
-                            <td class="s-spec-detail-item3">LED</td>
-                        </tr>
-                        <tr>
-                            <td>Đèn phanh treo cao</td>
-                            <td class="s-spec-detail-item1">LED</td>
-                            <td class="s-spec-detail-item2">LED</td>
-                            <td class="s-spec-detail-item3">LED</td>
-                        </tr>
-                        <tr>
-                            <td>Cảm biến gạt mưa tự động</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Gương chiếu hậu</td>
-                            <td class="s-spec-detail-item1">Chỉnh điện, tích hợp đèn báo rẽ LED</td>
-                            <td class="s-spec-detail-item2">Gập điện tự động, tích hợp đèn báo rẽ LED</td>
-                            <td class="s-spec-detail-item3">Gập điện tự động, tích hợp đèn báo rẽ LED</td>
-                        </tr>
-                        <tr>
-                            <td>Tay nắm cửa</td>
-                            <td class="s-spec-detail-item1">Cùng màu thân xe</td>
-                            <td class="s-spec-detail-item2">Cùng màu thân xe</td>
-                            <td class="s-spec-detail-item3">Sơn đen thể thao</td>
-                        </tr>
-                        <tr>
-                            <td>Cửa kính điện tự động lên xuống 1 chạm chống kẹt</td>
-                            <td class="s-spec-detail-item1">Hàng ghế trước</td>
-                            <td class="s-spec-detail-item2">Hàng ghế trước</td>
-                            <td class="s-spec-detail-item3">Hàng ghế trước</td>
-                        </tr>
-                        <tr>
-                            <td>Ăng ten</td>
-                            <td class="s-spec-detail-item1">Dạng vây cá mập</td>
-                            <td class="s-spec-detail-item2">Dạng vây cá mập</td>
-                            <td class="s-spec-detail-item3">Dạng vây cá mập, sơn đen thể thao</td>
-                        </tr>
-                        <tr>
-                            <td>Cánh lướt gió đuôi xe</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có, sơn đen thể thao</td>
-                        </tr>
-                        <tr>
-                            <td>Chụp ống xả mạ chrome</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Nội
-                                thất</strong></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Không
-                                gian</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Bảng đồng hồ trung tâm</td>
-                            <td class="s-spec-detail-item1">Digital 7 inch</td>
-                            <td class="s-spec-detail-item2">Digital 7 inch</td>
-                            <td class="s-spec-detail-item3">Digital 10.2 inch</td>
-                        </tr>
-                        <tr>
-                            <td>Chất liệu ghế</td>
-                            <td class="s-spec-detail-item1">Nỉ (Màu đen)</td>
-                            <td class="s-spec-detail-item2">Nỉ (Màu đen)</td>
-                            <td class="s-spec-detail-item3">Da, da lộn (Màu đen, đỏ)</td>
-                        </tr>
-                        <tr>
-                            <td>Ghế lái điều chỉnh điện</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">8 hướng</td>
-                        </tr>
-                        <tr>
-                            <td>Hàng ghế 2</td>
-                            <td class="s-spec-detail-item1">Gập 60:40 thông hoàn toàn với khoang chứa đồ</td>
-                            <td class="s-spec-detail-item2">Gập 60:40 thông hoàn toàn với khoang chứa đồ</td>
-                            <td class="s-spec-detail-item3">Gập 60:40 thông hoàn toàn với khoang chứa đồ</td>
-                        </tr>
-                        <tr>
-                            <td>Gương chiếu hậu trong xe chống chói tự động</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Đèn trang trí nội thất</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Bệ trung tâm tích hợp khay đựng cốc, ngăn chứa đồ</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hộc đồ khu vực khoang lái</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Tựa tay hàng ghế sau tích hợp hộc đựng cốc</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Ngăn đựng tài liệu cho hàng ghế sau</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Thảm trải sàn</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Tay
-                                lái</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Chất liệu</td>
-                            <td class="s-spec-detail-item1">Urethane</td>
-                            <td class="s-spec-detail-item2">Urethane</td>
-                            <td class="s-spec-detail-item3">Da</td>
-                        </tr>
-                        <tr>
-                            <td>Điều chỉnh 4 hướng</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Tích hợp nút điều chỉnh hệ thống âm thanh</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Trang bị
-                                tiện
-                                nghi</strong></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Tiện nghi
-                                cao
-                                cấp</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Khởi động từ xa</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Phanh tay điện tử</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Chế độ giữ phanh tự động</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Chìa khóa thông minh và tích hợp nút mở cốp</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Tay nắm cửa phía trước đóng/mở bằng cảm biến</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Kết nối
-                                và giải
-                                trí</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Hỗ trợ Honda CONNECT</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Màn hình</td>
-                            <td class="s-spec-detail-item1">Cảm ứng 7 inch</td>
-                            <td class="s-spec-detail-item2">Cảm ứng 7 inch</td>
-                            <td class="s-spec-detail-item3">Cảm ứng 9 inch</td>
-                        </tr>
-                        <tr>
-                            <td>Bản đồ định vị tích hợp</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Kết nối điện thoại thông minh, cho phép nghe nhạc, gọi điện, nhắn tin, sử dụng bản
-                                đồ, ra lệnh bằng giọng nói
-                            </td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có (kết nối không dây)</td>
-                        </tr>
-                        <tr>
-                            <td>Chế độ đàm thoại rảnh tay</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Quay số nhanh bằng giọng nói (Voice Tag)</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Kết nối và cập nhật dữ liệu qua wifi</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Kết nối Bluetooth</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Kết nối USB</td>
-                            <td class="s-spec-detail-item1">1 cổng</td>
-                            <td class="s-spec-detail-item2">1 cổng</td>
-                            <td class="s-spec-detail-item3">2 cổng</td>
-                        </tr>
-                        <tr>
-                            <td>Đài AM/FM</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống loa</td>
-                            <td class="s-spec-detail-item1">4 loa</td>
-                            <td class="s-spec-detail-item2">8 loa</td>
-                            <td class="s-spec-detail-item3">12 loa BOSE</td>
-                        </tr>
-                        <tr>
-                            <td>Sạc không dây</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Nguồn sạc</td>
-                            <td class="s-spec-detail-item1">2 Cổng</td>
-                            <td class="s-spec-detail-item2">2 Cổng</td>
-                            <td class="s-spec-detail-item3">3 Cổng</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Tiện nghi
-                                khác</strong>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống điều hòa tự động</td>
-                            <td class="s-spec-detail-item1">1 vùng</td>
-                            <td class="s-spec-detail-item2">1 vùng</td>
-                            <td class="s-spec-detail-item3">2 vùng</td>
-                        </tr>
-                        <tr>
-                            <td>Cửa gió điều hòa cho hàng ghế sau</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Đèn cốp</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Gương trang điểm cho hàng ghế trước</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>An
-                                toàn</strong></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Chủ
-                                động</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống công nghệ hỗ trợ lái xe an toàn tiên tiến Honda SENSING</td>
-                            <td class="s-spec-detail-item0" colspan="3"></td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Phanh giảm thiểu va chạm (CMBS)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Đèn pha thích ứng tự động (AHB)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Kiểm soát hành trình thích ứng bao gồm tốc độ thấp (ACC
-                                with LSF)
-                            </td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Giảm thiểu chệch làn đường (RDM)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Hỗ trợ giữ làn đường (LKAS)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 50px;">Thông báo xe phía trước khởi hành (LCDN)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Camera hỗ trợ quan sát làn đường (LaneWatch)</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống cảnh báo chống buồn ngủ (Driver Attention Monitor)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống hỗ trợ đánh lái chủ động (AHA)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thông cân bằng điện tử (VSA)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống kiểm soát lực kéo (TCS)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống chống bó cứng phanh (ABS)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ thống phân phối lực phanh điện tử (EBD)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hỗ trợ lực phanh khẩn cấp (BA)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Hỗ trợ khởi hành ngang dốc (HSA)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Camera lùi</td>
-                            <td class="s-spec-detail-item1">3 góc quay (hướng dẫn linh hoạt)</td>
-                            <td class="s-spec-detail-item2">3 góc quay (hướng dẫn linh hoạt)</td>
-                            <td class="s-spec-detail-item3">3 góc quay (hướng dẫn linh hoạt)</td>
-                        </tr>
-                        <tr>
-                            <td>Đèn cảnh báo phanh khẩn cấp (ESS)</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Chức năng khóa cửa tự động theo tốc độ</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>Bị
-                                động</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Túi khí cho người lái và ngồi kế bên</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Túi khí bên cho hàng ghế trước</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Túi khí rèm cho tất cả các hàng ghế</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Không</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Nhắc nhở cài dây an toàn</td>
-                            <td class="s-spec-detail-item1">Hàng ghế trước</td>
-                            <td class="s-spec-detail-item2">Hàng ghế trước</td>
-                            <td class="s-spec-detail-item3">Tất cả các ghế</td>
-                        </tr>
-                        <tr><td>Nhắc nhở kiểm tra hàng ghế sau</td>
-                        <td class="s-spec-detail-item1">Có</td>
-                        <td class="s-spec-detail-item2">Có</td>
-                        <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Khung xe hấp thụ lực và tương thích va chạm ACE</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Móc ghế an toàn cho trẻ em ISO FIX</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="s-specifications-table-title-td text-uppercase"><strong>An
-                                ninh</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Chìa khóa được mã hóa chống trộm và hệ thống báo động</td>
-                            <td class="s-spec-detail-item1">Có</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                        <tr>
-                            <td>Chế độ khóa cửa tự động khi chìa khóa ra khỏi vùng cảm biến</td>
-                            <td class="s-spec-detail-item1">Không</td>
-                            <td class="s-spec-detail-item2">Có</td>
-                            <td class="s-spec-detail-item3">Có</td>
-                        </tr>
-                    </tbody></table>
-                </div>
-            </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 422px; max-height: 1612px; top: 69px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
-        </div>
+        <h1>Honda Civic</h1>
     </div>
+
+    <div style="border: 1px solid black; margin: auto; padding: 10px;">
+        <h2>Màu sắc</h2>
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 5</div>
+                    <img src="/img/civic_red.png" style="width:100%">
+                </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 5</div>
+                    <img src="/img/civic_blue.png" style="width:100%">
+                </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 5</div>
+                    <img src="/img/civic_gray.png" style="width:100%">
+                </div>
+            
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                    <img src="/img/civic_white.png" style="width:100%">
+                </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 5</div>
+                    <img src="/img/civic_black.png" style="width:100%">
+                </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="/img/civic_red.png" style="width:100%" onclick="currentSlide(1)" alt="Đỏ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/civic_blue.png" style="width:100%" onclick="currentSlide(2)" alt="Xanh">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/civic_gray.png" style="width:100%" onclick="currentSlide(3)" alt="Xám">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/civic_white.png" style="width:100%" onclick="currentSlide(4)" alt="Trắng">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/civic_black.png" style="width:100%" onclick="currentSlide(5)" alt="Đen">
+                </div>    
+            </div>
+
+            <h2>Ngoại thất</h2>
+            <div class="ngoai-that" style="">
+                <div></div>
+                <img src="/img/mat_truoc_xe.png" alt="">
+                <img src="/img/cum_den_truoc.png" alt="">
+            </div>
+            
+    </div>
+
+    
+
 
 
     <script>
-    let slideIndex = 0;
-    showSlides();
+        let slideIndex = 1;
+        showSlides();
 
-    function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+
     </script>
     
 </body>

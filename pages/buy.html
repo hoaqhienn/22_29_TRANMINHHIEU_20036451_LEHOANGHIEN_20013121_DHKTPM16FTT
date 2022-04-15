@@ -5,17 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
 
     <img src="../img/banner.png" alt="" width="100%">
-    <a href="../index.html" style="text-decoration: none; color: #CC0000; font-weight: bold;">Home</a>
+
+
+    <div class="site-map" style="padding: 10px 0; border-bottom: 1px solid;">
+        <a class="parent mr-2" href="/" style="text-decoration: none; color: #cc0000;">Trang chủ</a>
+        <span class="img mr-2">❯</span>
+        <a class="current">Sản phẩm</a>
+    </div>
+
+
     <div style="margin: 30px;">
-        <h3 style="color: #CC0000;">Ô tô</h3>
+        <h3 style="color: #CC0000; padding: 10px; border-bottom: 1px solid;">Ô tô</h3>
 
             <div style="float: left;">
                 <img src="../img/honda-civic.png" alt=""><br>
-                <p>Honda Civic</p>
+                <p style="font-weight: bold;">Honda Civic</p>
                 <p>Từ 730.000.000 VNĐ</p>
                 <button><a href="../pages/hondacivic.html">Chi tiết</a></button>
     
@@ -23,7 +37,7 @@
 
             <div>
                 <img src="../img/honda-city.png" alt=""><br>
-                <p>Honda City</p>
+                <p style="font-weight: bold;">Honda City</p>
                 <p>Từ 529.000.000 VNĐ</p>
                 <button><a href="../pages/hondacity.html">Chi tiết</a></button>
 
@@ -32,14 +46,17 @@
 
 
         <div style="margin: 30px;">
-            <h3 style="color: #CC0000; padding: 10px;">Phụ Kiện</h3>
+            <h3 style="color: #CC0000; padding: 10px; border-bottom: 1px solid;">Phụ kiện</h3>
     
-                <div style="float: left;">
+                <div">
                     <img src="../img/mamxe.webp" alt="" width="210px"><br>
-                    <p>Mâm xe Honda Civic</p>
+                    <p style="font-weight: bold;">Mâm xe Honda Civic</p>
                     <button><a href="../pages/mam.html">Liên hệ</a></button>
-        
                 </div>
-            </div>
+        </div>
+        
+        <div style="height: 100px;">
+            @davi - 20013121 - Lê Hoàng Hiện
+        </div>
 </body>
 </html>

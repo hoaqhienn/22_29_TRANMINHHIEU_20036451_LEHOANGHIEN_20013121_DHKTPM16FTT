@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+
+</head>
+
+<body>
+    <div style="text-align: center; border: 10px solid black; width: auto; height: auto; margin-left: 30%; margin-right: 30%; padding: 10px;">
+    <div>
+        <h2 style="text-align: center;">THÔNG TIN CÁ NHÂN</h2>
+    </div>
+    <div style="text-align: center;">
+        <form role="form" style="margin-top: 10px;">
+
+            
+            <div>
+                <label for="Name">Họ tên:</label>
+                <input type="text" id="Name" >
+                <span style="color: red;" id="tbName">*</span>
+                <br> <br>
+            </div>
+            
+            <div>
+                <label for="DC">Địa chỉ:</label>
+                <input type="text" id="DC" >
+                <span style="color: red;" id="tbDc">*</span>
+                <br> <br>
+            </div>
+
+            <div>
+                <label for="NTT">Ngày tháng năm sinh:</label>
+                <input type="date" id="NTT">
+                <span style="color: red;" id="tbNTT">*</span>
+                <br> <br>
+            </div>
+            
+            <div >
+                <label for="SDT">Số điện thoại: </label>
+                <input type="text" id="SDT" >
+                <span style="color: red;" id="tbSDT"></span>
+            </div>
+
+            <div> 
+                Giới tính:
+                <input type="radio" name="giới tính"> Nam
+                <input type="radio" name="giới tính" checked> Nữ
+                <br><br>
+            </div>
+           
+            <div>
+                <label for="ADD">Ảnh đại diện: </label>
+                <input type="file" id="ADD">
+                <!-- <span style="color: red;" id="tbAdd">*</span> -->
+                <br><br> 
+
+            </div>
+            <button id="Save" type="button" style="color: white; background-color:
+                         green; width: 30%; height: 40px;">
+                Đăng Ký
+            </button>
+            <button id="Save" type="button" style="color: white; background-color:
+                         orange; width: 30%; height: 40px;">
+                         <a style="text-decoration: none; color: #FFF;" href="/pages/DangNhap.html">Trở Lại Đăng Nhập</a>   
+            </button> <br> <br>
+            Hoặc đăng ký tài khoản với <br>
+            <button style="background-color: blue;width: auto; color: white;">Facebook</button>
+            <button style="background-color: orange;width: auto; color: white;">Google+</button>
+            <button style="background-color: violet;width: auto; color: white;">Yahoo</button>
+
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
