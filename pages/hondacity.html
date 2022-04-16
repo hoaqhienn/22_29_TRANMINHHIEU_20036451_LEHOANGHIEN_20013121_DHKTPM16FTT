@@ -5,13 +5,383 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    Honda City <br>
-    <img src="../img/honda-city.png" alt=""><br>
-    <a href="../index.html">Home</a>
-    <a href="../pages/buy.html">Back</a>
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <style>
+        /*  */
+        body {
+            font-family: Arial;
+            margin: auto;
+            width: 890px !important;
+            height: auto;
+        }
 
+        * {
+        box-sizing: border-box;
+        }
+
+        img {
+        vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+        position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+        display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+        cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+        }
+
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+        float: left;
+        width: 16.6%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+        opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+        opacity: 1;
+        }
+
+        </style>
+
+</head>
+
+<body>
+    <header class="">
+        <div>
+            <ul>
+                <li>
+                    <a href="">Thăm dò ý kiến Khách hàng</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="">Câu hỏi thường gặp</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="">Liên hệ</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="">Tuyển dụng</a>
+                </li>
+            </ul>
+            <div>
+                <button>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a href="/">
+                    <img src="../IMG/Logo.png" alt="HONDA Việt Nam">
+                </a>
+            </div>
+        </div>
+        <!--Menu-->
+        <nav>
+            <ul>
+                <li>
+                    <a href="../HTML/Home.html">Trang chủ</a>
+                </li>
+                <li class="arrow ">
+                    <a href="/pages/intro.html">Giới thiệu</a>
+                </li>
+  
+                <li class="arrow ">
+                    <a href="">Ô Tô</a>
+                </li>
+                <li class="arrow ">
+                    <a href="">My Honda+</a>
+                </li>
+                <li class="">
+                    <a href="">Đóng góp xã hội</a>
+                </li>
+                <li class="arrow ">
+                    <a href="#">Lái xe an toàn</a>
+                </li>
+  
+                <li class="arrow ">
+                    <a href="#">Tin tức</a>
+                    <ul>
+                        <li><a href="">Tin tức chung</a></li>
+                        <li><a href="">Tin tức ô tô</a></li>
+                        <li><a href="">Doanh số bán hàng</a></li>
+                        <li><a href="">Khuyến mãi</a></li>
+                        <li><a href="">Đóng góp Xã hội</a></li>
+                        <li><a href="">Lái xe an toàn</a></li>
+                        <li><a href="">MotorSports</a></li>
+                        <li><a href="">Các tin khác</a></li>
+                    </ul>
+                </li>
+                <li class="arrow">
+                    <a href="pages/DangNhap.html">Đăng Nhập</a>
+                </li>
+                <li>
+                    <a href=""><i class="fa fa-ellipsis-h"></i></a>
+                    <ul>
+                        <li>
+                            <a href="">Đóng góp xã hội</a>
+                        </li>
+  
+                        <li class="">
+                            <a href="">MotorSports</a>
+                        </li>
+                        <li class="arrow ">
+                            <a href="">Tin tức</a>
+                            <ul>
+                                <li><a href="">Tin tức chung</a></li>
+  
+                                <li><a href="">Tin tức ô tô</a></li>
+                                <li><a href="">Doanh số bán hàng</a></li>
+                                <li><a href="">Khuyến mãi</a></li>
+                                <li><a href="">Đóng góp Xã hội</a></li>
+                                <li><a href="">Lái xe an toàn</a></li>
+                                <li><a href="">MotorSports</a></li>
+                                <li><a href="">Các tin khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="site-map" style="padding: 10px 0; border-bottom: 1px solid;">
+        <a class="parent mr-2" href="/" style="text-decoration: none; color: #cc0000;">Trang chủ</a>
+        <span class="img mr-2">❯</span>
+        <a class="current" href="/pages/buy.html" style="text-decoration: none; color: #cc0000;">Sản phẩm</a>
+        <span class="img mr-2">❯</span>
+        Honda City
+    </div>
+
+    <div>
+        <h1>Honda City</h1>
+    </div>
+
+    <div style="border: 1px solid black; margin: auto; padding: 10px;">
+        <p> <b>Honda City 2022</b> với kiểu dáng xe thiết kế thể thao hiện đại, kích thước xe lớn hơn, bổ sung thêm nhiều trang bị tiện ích mới được Honda Việt Nam lắp ráp trong nước và phân phối với 3 phiên bản City G - City L - City RS <br> Giá bán xe <b>Honda City 2022</b> từ 529-599 triệu đồng, là dòng xe có giá bán cao nhất ở phân khúc xe sedan hạng B, cạnh tranh với Toyota Vios, Hyundai Accent, Mazda 2, KIA Soluto, Mitsubishi Attrage... <br> <b>Honda City</b> thu hút khách hàng nhờ thiết kế xe đẹp, động cơ mạnh nhất phân khúc, không gian cabin rộng rãi, trang bị tiện nghi và an toàn hấp dẫn.</p>
+        <img src="/img/honda-city.png" alt="" style="display: block; margin: auto;">
+        <h2>Giá bán Honda Civic tại Việt Nam</h2>
+        <ul>
+            <li>Honda City G - 529 triệu đồng</li>
+            <li>Honda City L - 569 triệu đồng</li>
+            <li>Honda City RS - 599 triệu đồng</li>
+
+        </ul>
+        <h2>Màu sắc</h2>
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                    <img src="/img/y-6.png" style="width:100%">
+                </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                    <img src="/img/y-5.png" style="width:100%">
+                </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                    <img src="/img/y-4.png" style="width:100%">
+                </div>
+            
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                    <img src="/img/y-3.png" style="width:100%">
+                </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                    <img src="/img/y-2.png" style="width:100%">
+                </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                    <img src="/img/y-1.png" style="width:100%">
+                </div>
+            
+            <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a> -->
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="/img/y-6.png" style="width:100%" onclick="currentSlide(1)" alt="Trắng ngà">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/y-5.png" style="width:100%" onclick="currentSlide(2)" alt="Ghi bạc">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/y-4.png" style="width:100%" onclick="currentSlide(3)" alt="Titan">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/y-3.png" style="width:100%" onclick="currentSlide(4)" alt="Đỏ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="/img/y-2.png" style="width:100%" onclick="currentSlide(5)" alt="Xanh">
+                </div>    
+                <div class="column">
+                    <img class="demo cursor" src="/img/y-1.png" style="width:100%" onclick="currentSlide(6)" alt="Đen">
+                </div>  
+            </div>
+
+            <h2>Ngoại thất</h2>
+            <div class="ngoai-that" style="">
+                <table border="0" align="center">
+                    <tr>
+                        <td><img src="/img/yo1.png" alt="" height="150">Mặt trước xe</td>
+                        <td><img src="/img/yo2.png" alt="" height="150">Cụm đèn trước</td>
+                        <td><img src="/img/yo3.png" alt="" height="150">Đèn sương mù</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/img/yo4.png" alt="" height="150">Gương chiếu hậu</td>
+                        <td><img src="/img/yo5.png" alt="" height="150">La-zăng</td>
+                        <td><img src="/img/yo6.png" alt="" height="150">Cụm đèn hậu</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/img/yo7.png" alt="" height="150">Cánh lướt gió</td>
+                        <td><img src="/img/yo8.png" alt="" height="150">Ốp cản sau</td>
+                        <td><img src="/img/yo9.png" alt="" height="150">Ăng - ten</td>
+                    </tr>
+                </table>
+            </div>
+        
+            <h2>Nội thất</h2>
+            <div class="ngoai-that" style="">
+                <table border="0" align="center">
+                    <tr>
+                        <td><img src="/img/yi-1.png" alt="" height="110">Khoang nội thất</td>
+                        <td><img src="/img/yi-2.png" alt="" height="110">Đồng hồ tốc độ</td>
+                        <td><img src="/img/yi-3.png" alt="" height="110">Vô lăng</td>
+                        <td><img src="/img/yi-4.png" alt="" height="110">Màn hình cảm ứng</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><img src="/img/yi-5.png" alt="" height="110">Hệ thống điều hoà</td>
+                        <td><img src="/img/yi-6.png" alt="" height="110">Hệ thống loa</td>
+                        <td><img src="/img/yi-7.png" alt="" height="110">Tựa tay hàng ghế sau</td>
+                        <td><img src="/img/yi-8.png" alt="" height="110">Cửa gió hàng ghế sau</td>
+                        
+                    </tr>
+                </table>
+            </div>
+
+            <h2>Thông số kỹ thuật</h2>
+            <div>
+                <img src="/img/yt-1.jpg" alt="" style="display: block; margin: 0 auto; width: 100%;">
+                <br>
+                <img src="/img/yt-2.jpg" alt="" style="display: block; margin: 0 auto; width: 100%;">
+            </div>
+
+            <div style="text-align: right; margin: auto; padding: 10px;">
+                <a href="/pages/buy.html" style="text-decoration: none; color: black; border: 1px solid; padding: 0 5px; margin: auto;">Trở về</a>
+            </div>
+
+    </div>
+
+    
+
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,81 @@
+:root {
+    --bg1: #9b59b6;
+    --bg2: #3498db;
+    --bg: #07E1EC;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    width: 890px;
+    height: auto;
+    background-image: url("/img/bg.jpg")
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 60px;
+    color: #07E1EC;
+
+}
+
+section {
+    width: 50%;
+    float: left;
+    margin-top: 50px;
+}
+
+aside {
+    width: 40%;
+    float: right;
+    margin-top: 50px;
+}
+
+.container {
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    background: linear-gradient(var(--bg1), var(--bg2));
+    text-align: center;
+}
+
+.container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin: 20px auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.container h2 {
+    color: #fffffF;
+
+}
+
+.container p {
+    color: #fffffF;
+    margin: 0 30px 12px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px 12px;
+}
+
+.btn-container button {
+    height: 35px;
+    width: 150px;
+    border: none;
+    margin-right: 12px;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+}
